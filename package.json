@@ -1,0 +1,48 @@
+{
+    "name": "vue-template",
+    "version": "0.1.0",
+    "license": "GPL-3.0-only",
+    "repository": "git@github.com:cwright814/Portfolio2019.git",
+    "private": false,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "test": "npm run test:e2e-nogui && npm run test:unit",
+        "test:e2e": "vue-cli-service test:e2e",
+        "test:e2e-auto": "vue-cli-service test:e2e --headless --headed",
+        "test:e2e-nogui": "vue-cli-service test:e2e --headless",
+        "test:unit": "vue-cli-service test:unit"
+    },
+    "dependencies": {
+        "acorn": "^6.2.0",
+        "bootstrap-vue": "^2.0.0-rc.26",
+        "jquery": "^3.4.1",
+        "vue": "^2.6.10",
+        "vue-class-component": "^7.1.0",
+        "vue-property-decorator": "^8.2.1",
+        "vue-resource": "^1.5.1",
+        "vue-router": "^3.0.7",
+        "vuex": "^3.1.1"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.1.7",
+        "@types/mocha": "^5.2.7",
+        "@vue/cli-plugin-babel": "^3.9.2",
+        "@vue/cli-plugin-e2e-cypress": "^3.9.0",
+        "@vue/cli-plugin-typescript": "^3.9.0",
+        "@vue/cli-plugin-unit-mocha": "^3.9.0",
+        "@vue/cli-service": "^3.9.3",
+        "@vue/test-utils": "^1.0.0-beta.29",
+        "chai": "^4.2.0",
+        "eslint": "^6.0.1",
+        "node-sass": "^4.12.0",
+        "sass-loader": "^7.1.0",
+        "typescript": "^3.5.3",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "engines": {
+        "node": "^10.16.0",
+        "npm": "^6.9.0"
+    }
+}
