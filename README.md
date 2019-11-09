@@ -2,12 +2,15 @@
 
 Built from the vue-cli. Modified to include bootstrap-vue.
 
-## Requirements
+## System Requirements
 
-**Node** 10.16.x
-**NPM** 6.9.x
+- **Node** 10.16.x
+- **NPM** 6.9.x
+- **Python2** 2.7.x
+- **make** latest
+- **g++** latest
 
-Easiest way is to use NVM.
+Easiest way to install Node/NPM is to use NVM.
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
@@ -15,55 +18,84 @@ nvm install 10.16
 nvm use 10.16
 ```
 
-## Project setup
+### Installing on Windows / Mac OS / Linux
+
+```bash
+cd ./vue-template
+```
+
+Proceed to **Project Setup**.
+
+### Installing on Android
+
+Install `node-gyp` via NPM first:
+
+```bash
+cd ./vue-template
+npm install node-gyp
+```
+
+Then open `common.gypi` with a text editor such as Nano:
+
+```bash
+nano ~/.node-gyp/YOUR_INSTALLED_VERSION/include/node/common.gypi
+```
+
+Search for the first occurrence of `"android"`, and replace `'-fPIE'` with `'-fPIC'` for both `'cflags'` and `'ldflags'`. Remove the `-pie` flag from `'ldflags'` as well. Search for the second occurrence of `"android"` and repeat the steps above. Save the file, and be sure to `cd` back into the vue-template directory if necessary.
+
+You may now proceed to **Project Setup**.
+
+## Project Setup
+
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Launch development server with hot-reload support
 
 ```bash
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compile and minify for production
 
 ```bash
 npm run build
 ```
 
-### Lints and fixes files
+### Lint and fix files
 
 ```bash
 npm run lint
 ```
 
-### Run your end-to-end and unit tests
+### Run all tests (end-to-end and unit)
 
 ```bash
 npm run test
 ```
 
-### Run your end-to-end tests manually
+### Run end-to-end tests manually
 
 ```bash
 npm run test:e2e
 ```
 
-### Run your end-to-end tests automatically
+### Run end-to-end tests automatically
 
 ```bash
 npm run test:e2e-auto
 ```
 
-### Run your end-to-end tests without the GUI
+### Run end-to-end tests without the GUI
 
 ```bash
 npm run test:e2e-nogui
 ```
 
-### Run your unit tests
+### Run unit tests
 
 ```bash
 npm run test:unit
