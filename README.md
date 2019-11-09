@@ -2,6 +2,8 @@
 
 Built from the vue-cli. Modified to include bootstrap-vue.
 
+This branch features changes to better support development on an Android platform, specifically via Termux. In particular, Cypress for e2e testing is not supported, and previewing live changes from the development server requires the server and client to be on the same local network.
+
 ## System Requirements
 
 - **Node** 10.16.x
@@ -71,28 +73,10 @@ npm run build
 npm run lint
 ```
 
-### Run all tests (end-to-end and unit)
+### Run all tests
 
 ```bash
 npm run test
-```
-
-### Run end-to-end tests manually
-
-```bash
-npm run test:e2e
-```
-
-### Run end-to-end tests automatically
-
-```bash
-npm run test:e2e-auto
-```
-
-### Run end-to-end tests without the GUI
-
-```bash
-npm run test:e2e-nogui
 ```
 
 ### Run unit tests
